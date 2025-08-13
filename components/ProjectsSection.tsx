@@ -87,7 +87,7 @@ export function ProjectsSection() {
         "HuggingFace",
         "Scikit-learn",
       ],
-      github: "#",
+      github: "https://github.com/kavyavenk/emotion-detection",
       live: "#",
       featured: false,
       icon: BookOpen,
