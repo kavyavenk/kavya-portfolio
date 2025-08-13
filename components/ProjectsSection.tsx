@@ -11,6 +11,7 @@ import {
   Brain,
   Heart,
   Zap,
+  BookOpen,
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -72,6 +73,25 @@ export function ProjectsSection() {
       featured: true,
       icon: Users,
       achievement: "Published at IEEE SouthEastCon",
+    },
+    {
+      title: "Emotion Detection in Text using Natural Language Processing",
+      description:
+        "Developed a fine-grained, multi-label emotion classification system using the GoEmotions dataset (58k+ Reddit comments annotated with 28 emotions + neutral). Benchmarked classical approaches against a fine-tuned BERT model, achieving ~20 percentage point micro-F1 improvement over statistical baselines.",
+      image:
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
+      technologies: [
+        "NLP",
+        "PyTorch",
+        "BERT",
+        "HuggingFace",
+        "Scikit-learn",
+      ],
+      github: "#",
+      live: "#",
+      featured: false,
+      icon: BookOpen,
+      achievement: "Jan-Apr 2025",
     },
     {
       title: "Athena - Emotional Foresight Investing App",
