@@ -2,11 +2,9 @@
 
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
-import {
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import profileImage from "figma:asset/06b79a67f8ac2ebfbbd8e0756faa9caa2dcc56b1.png";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function HeroSection() {
   const scrollToProjects = () => {
@@ -52,6 +50,23 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
+          {/* Profile Picture */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex justify-center mb-8"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-lg opacity-50 animate-pulse"></div>
+              <ImageWithFallback
+                src={profileImage}
+                alt="Kavya Venkatesh"
+                className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-blue-300 shadow-2xl"
+              />
+            </div>
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -82,8 +97,8 @@ export function HeroSection() {
             </span>{" "}
             specializing in{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              Machine Learning, Data Science, & Software
-              Development
+              Machine Learning, Natual Language Processing, &
+              Software Development
             </span>
           </motion.div>
 
@@ -93,12 +108,13 @@ export function HeroSection() {
             transition={{ delay: 0.8 }}
             className="text-gray-400 text-lg max-w-3xl mx-auto mb-8"
           >
-            Currently pursuing my Master's in Computer Science
-            at Columbia University, with experience at Ernst &
-            Young developing AI-driven data solutions.
-            Passionate about leveraging technology for social
-            impact, from data privacy research to intimate
-            partner violence prevention through technology.
+            Master's student in Computer Science (ML) at
+            Columbia University with experience at Ernst & Young
+            developing AI-driven data solutions. Passionate
+            about leveraging technology for social impact - from
+            multilingual speech research and data privacy to
+            hackathon projects aimed at scaling modern
+            technology for good.
           </motion.p>
 
           <motion.div
@@ -145,8 +161,6 @@ export function HeroSection() {
             </div>
           </motion.div>
         </motion.div>
-
-
       </div>
     </section>
   );
