@@ -14,9 +14,75 @@ import {
   BookOpen,
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import backpackImage from "figma:asset/450e5a8b2ea628ad360ef7e45866ada4346eb1dd.png";
+import speechWaveformImage from "figma:asset/736dda45b331b9557b0b1d8e1d53d550a27ae958.png";
 
 export function ProjectsSection() {
   const projects = [
+    {
+      title: "MindPad",
+      description:
+        "Winner of Best Overall 1st Place, Best Use of Gemini API (MLH/Google), 3rd Best Practical AI Innovation (Amazon) at HackPrinceton Fall 2025. AI-powered multimodal learning platform enabling students to interact with course material through gesture, voice, & web-based canvas. Features real-time hand gesture tracking, context-aware voice explanations, diagrams, & summaries with accessible, touch-free navigation for students with motor limitations.",
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
+      technologies: [
+        "Python",
+        "React",
+        "OpenCV",
+        "MediaPipe",
+        "ANN",
+        "OpenAI Agent SDK",
+        "Gemini API",
+        "Flask",
+      ],
+      github: "https://github.com/kavyavenk/MindPad",
+      live: "https://devpost.com/software/mindpad",
+      featured: true,
+      icon: Award,
+      achievement: "Best Overall - HackPrinceton",
+      isNew: false,
+    },
+    {
+      title: "Multilingual Code-Switched Speech Research",
+      description:
+        "Graduate research at Columbia University Speech Lab under Prof. Julia Hirschberg. Designing multilingual speech evaluation pipeline using DisVoice to quantify prosody and rhythm features in code-switched dialogue across Hindi-English and Mandarin-English datasets.",
+      image: speechWaveformImage,
+      technologies: [
+        "Python",
+        "Praat",
+        "DisVoice",
+        "Speech Processing",
+        "Prosody Analysis",
+        "Multilingual NLP",
+      ],
+      github: "#",
+      live: "https://www.cs.columbia.edu/speech/",
+      featured: true,
+      icon: BookOpen,
+      achievement: "Ongoing NLP Research",
+    },
+    {
+      title: "FengShui.fy",
+      description:
+        "Winner of Best Use of AI @ Columbia DivHacks 2025. AI-powered spatial intelligence tool that transforms room photos into interactive 3D layouts, evaluating how well a space aligns with Feng Shui principles of harmony and productivity. The system uses computer vision to analyze orientational factors to generate a Feng Shui Score that updates in real time in a 3D environment and provides personalized insights on how spatial changes impact focus and well-being.",
+      image:
+        "https://images.unsplash.com/photo-1673098224986-993e9913891e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGludGVyaW9yJTIwcm9vbSUyMGRlc2lnbiUyMGZlbmclMjBzaHVpfGVufDF8fHx8MTc1OTY3NTIwMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      technologies: [
+        "Next.js",
+        "Three.js",
+        "FastAPI",
+        "Computer Vision",
+        "Google Gemini",
+        "3D Modeling",
+        "Blender",
+      ],
+      github: "https://github.com/kavyavenk/fengshui.ai",
+      live: "https://demofengshui.netlify.app/",
+      featured: true,
+      icon: Brain,
+      achievement: "Spatial AI Innovation",
+      isNew: false,
+    },
     {
       title: "F1 Fantasy League Optimizer",
       description:
@@ -35,8 +101,8 @@ export function ProjectsSection() {
       live: "https://f1-fantasy-optimizer.streamlit.app/",
       featured: true,
       icon: Zap,
-      achievement: "Dec 2024 - Jan 2025",
-      isNew: true,
+      achievement: "Optimization Algorithms",
+      isNew: false,
     },
     {
       title: "prompt+ Chrome Extension",
@@ -59,7 +125,7 @@ export function ProjectsSection() {
     {
       title: "Technology & Intimate Partner Violence Research",
       description:
-        "Groundbreaking undergraduate research on technology as a tool of coercive control in IPV. Published and presented at IEEE SouthEastCon, UROP Symposium, and multiple conferences. Combines cybersecurity, psychology, and mental health interventions.",
+        "Undergraduate research on technology as a tool of coercive control in IPV. Published and presented at IEEE SouthEastCon, CTSA, and UROP Symposium. Combines cybersecurity, psychology, and mental health interventions.",
       image:
         "https://images.unsplash.com/photo-1579667410546-f7079afa0601?w=600&h=400&fit=crop",
       technologies: [
@@ -75,7 +141,30 @@ export function ProjectsSection() {
       achievement: "Published at IEEE SouthEastCon",
     },
     {
-      title: "Emotion Detection in Text using Natural Language Processing",
+      title: "Multilingual Backpack Language Models",
+      description:
+        "Research project implementing interpretable sense-based language models for French-English translation. Trained a 132M-parameter Backpack model from scratch on Europarl parallel data with 16 interpretable sense vectors per word, achieving 0.18 BLEU score and 0.44 cross-lingual word similarity correlation. Demonstrated 4x performance improvement over Transformer baseline with 0.85 cross-lingual alignment and labeled semantic categories for transparent cross-lingual analysis.",
+      image: backpackImage,
+      technologies: [
+        "Python",
+        "PyTorch",
+        "Transformers",
+        "HuggingFace",
+        "XLM-RoBERTa",
+        "sacrebleu",
+        "MultiSimLex",
+        "NumPy",
+        "scikit-learn",
+      ],
+      github:
+        "https://github.com/kavyavenk/multilingual-backpacks",
+      live: "https://github.com/kavyavenk/multilingual-backpacks",
+      featured: false,
+      icon: BookOpen,
+    },
+    {
+      title:
+        "Emotion Detection in Text using Natural Language Processing",
       description:
         "Developed a fine-grained, multi-label emotion classification system using the GoEmotions dataset (58k+ Reddit comments annotated with 28 emotions + neutral). Benchmarked classical approaches against a fine-tuned BERT model, achieving ~20 percentage point micro-F1 improvement over statistical baselines.",
       image:
@@ -92,40 +181,6 @@ export function ProjectsSection() {
       featured: false,
       icon: BookOpen,
       achievement: "Jan-Apr 2025",
-    },
-    {
-      title: "Athena - Emotional Foresight Investing App",
-      description:
-        "A sentiment-driven mobile prototype that integrates predictive analytics, decision modeling, and emotion tracking to help users make data-informed investment choices with real-time feedback and behavioral logging.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      technologies: [
-        "Mobile App",
-        "Predictive Analytics",
-        "Emotion AI",
-        "Financial Modeling",
-      ],
-      // github: "#",
-      live: "https://www.figma.com/slides/rbS5a1fSg8SRple6ljAmr2/FigBuild-2025--athena?node-id=3-268&t=hBPk9mfB87CtCqkF-1",
-      featured: false,
-      icon: Brain,
-    },
-    {
-      title: "Dawn - Mental Health App",
-      description:
-        "End-to-end mental health application focusing on improving user well-being. Includes business pitch, wireframing, UI/UX design, development using Microsoft PowerApps with Dataverse backend, and comprehensive marketing strategy.",
-      image:
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
-      technologies: [
-        "Microsoft PowerApps",
-        "Dataverse",
-        "UI/UX Design",
-        "Mental Health",
-      ],
-      // github: "#",
-      live: "https://www.figma.com/proto/555xlVLKteUeiY2wVrpyTe/kavya-mental-health-app-wireframe?node-id=202-540&starting-point-node-id=202%3A540&t=4DxByaS0Ahk8JjT4-1",
-      featured: false,
-      icon: Heart,
     },
     {
       title: "AI-Driven Data Solutions at EY",
@@ -146,6 +201,42 @@ export function ProjectsSection() {
       icon: Brain,
     },
     {
+      title: "Athena - Emotional Foresight Investing App",
+      description:
+        "A sentiment-driven mobile prototype that integrates predictive analytics, decision modeling, and emotion tracking to help users make data-informed investment choices with real-time feedback and behavioral logging.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      technologies: [
+        "Mobile App",
+        "Predictive Analytics",
+        "Emotion AI",
+        "Financial Modeling",
+      ],
+      // github: "#",
+      live: "https://www.figma.com/slides/rbS5a1fSg8SRple6ljAmr2/FigBuild-2025--athena?node-id=3-268&t=hBPk9mfB87CtCqkF-1",
+      featured: false,
+      icon: Brain,
+    },
+    {
+      title: "Studyful",
+      description:
+        "Study-first coordination platform inspired by Partiful × LettuceMeet that reduces friction in organizing collaborative campus study sessions. Features shared study events, calendar availability sync, session context views, integrated chat, and lightweight task tracking.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
+      technologies: [
+        "Figma",
+        "HTML / CSS",
+        "JavaScript",
+        "Flask",
+        "Firebase",
+        "User Research & Evaluation",
+        "Human-Centered Design",
+      ],
+      live: "https://drive.google.com/file/d/1LCnxWZlm2z7kUNK2pVT0lXXQOE-FnG59/view?usp=sharing",
+      featured: false,
+      icon: BookOpen,
+    },
+    {
       title: "Data Privacy Framework",
       description:
         "Created a three-lens framework of diagnostic questions to improve user trust in systems and e-governance services. Combined technical, legal, and sociopsychological understanding to design user-centric privacy solutions.",
@@ -161,6 +252,23 @@ export function ProjectsSection() {
       live: "https://www.linkedin.com/in/kavyavenkatesh/",
       featured: false,
       icon: Users,
+    },
+    {
+      title: "Dawn - Mental Health App",
+      description:
+        "End-to-end mental health application focusing on improving user well-being. Includes business pitch, wireframing, UI/UX design, development using Microsoft PowerApps with Dataverse backend, and comprehensive marketing strategy.",
+      image:
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
+      technologies: [
+        "Microsoft PowerApps",
+        "Dataverse",
+        "UI/UX Design",
+        "Mental Health",
+      ],
+      // github: "#",
+      live: "https://www.figma.com/proto/555xlVLKteUeiY2wVrpyTe/kavya-mental-health-app-wireframe?node-id=202-540&starting-point-node-id=202%3A540&t=4DxByaS0Ahk8JjT4-1",
+      featured: false,
+      icon: Heart,
     },
   ];
 
@@ -189,7 +297,7 @@ export function ProjectsSection() {
         </motion.div>
 
         {/* Featured Projects */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -282,7 +390,7 @@ export function ProjectsSection() {
           </h3>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {otherProjects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -324,7 +432,7 @@ export function ProjectsSection() {
                   <h4 className="text-lg text-white mb-2 group-hover:text-blue-300 transition-colors duration-300">
                     {project.title}
                   </h4>
-                  <p className="text-gray-400 text-sm mb-3 line-clamp-3">
+                  <p className="text-gray-400 text-sm mb-3">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-1">
@@ -396,12 +504,18 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button
-            variant="outline"
-            className="border-blue-400/50 text-blue-300 hover:bg-blue-400/10 px-8 py-3"
+          <a
+            href="https://github.com/kavyavenk"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            View All Projects on GitHub
-          </Button>
+            <Button
+              variant="outline"
+              className="border-blue-400/50 text-blue-300 hover:bg-blue-400/10 px-8 py-3"
+            >
+              View All Projects on GitHub
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>
