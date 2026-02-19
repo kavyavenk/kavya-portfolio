@@ -72,32 +72,40 @@ export function AboutSection() {
               Machine Learning, building upon my strong
               foundation from Georgia Institute of Technology
               where I graduated with a 3.91 GPA and Highest
-              Honors. My journey spans from software engineering
-              to cutting-edge AI and data science applications.
+              Honors. My journey spans from full-stack
+              development in software engineering to
+              cutting-edge AI and data science applications in
+              technology consulting. I enjoy translating complex
+              models into real-world solutions that create
+              meaningful change.
             </p>
             <p className="text-gray-300 leading-relaxed">
               At Ernst & Young, I worked as an AI & Data
               Technology Consulting Intern, developing data
               modernization solutions building advanced agentic
               workflows, and using microservices architecture,
-              Databricks, and modern cloud technologies. My
-              experience ranges from creating AI-driven
-              forecasting tools to implementing workforce
-              planning chatbots that enhance operational
-              efficiency.
+              Databricks, and modern cloud technologies. I
+              worked on AI-driven forecasting tools and
+              implementing workforce planning chatbots that
+              enhance operational efficiency. I am passionate
+              about hackathon projects that drive me to use
+              modern technical advances for social good. My work
+              so far spans machine learning, natural language
+              processing, and scalable AI applications.
             </p>
             <p className="text-gray-300 leading-relaxed">
               What drives me most is the intersection of
               technology and social good. My undergraduate
               research on technology-enabled coercive control in
               intimate partner violence has been presented at
-              multiple conferences, combining technical
-              expertise with deep social awareness. When I'm not
-              coding, you'll find me humming music across
-              genres, curled up with a good book, catching the
-              latest F1 race or tennis match, or exploring art
-              museums and galleries – pursuits that fuel my
-              creativity in technical problem-solving.
+              multiple conferences, and I'm currently exploring
+              prosody in multilingual speech data at the Speech
+              Lab at Columbia. When I'm not coding, you'll find
+              me humming music across genres, curled up with a
+              good book, catching the latest F1 race or tennis
+              match, or exploring art museums and galleries –
+              pursuits that fuel my creativity in technical
+              problem-solving.
             </p>
 
             <motion.div
@@ -107,12 +115,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="flex flex-wrap gap-3 mt-6"
             >
-              {[
-                "AI Enthusiast",
-                "Research-Oriented",
-                "Social Impact Advocate",
-                "Creative Problem Solver",
-              ].map((trait, index) => (
+              {[].map((trait, index) => (
                 <span
                   key={trait}
                   className="px-4 py-2 bg-blue-400/20 text-blue-300 rounded-full text-sm border border-blue-400/30"
